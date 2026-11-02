@@ -4,14 +4,15 @@ Curso de Análisis y Diseño de Algoritmos. El trabajo es encontrar una buena co
 
 | Notebook | Colab |
 |---|---|
-| Proyecto | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DanielMelo404/Proyecto-Oraculo-AyD/blob/main/proyecto_oraculo.ipynb) |
+| Proyecto base | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/stokkerdev/ADA-2026-2-GP01/blob/main/proyecto_oraculo.ipynb) |
+| Primera entrega | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/stokkerdev/ADA-2026-2-GP01/blob/main/Primera_entrega.ipynb) |
 
 ## Cómo se juega
 
 1. Abran el notebook del curso en Colab.
 2. Corran las celdas 1–3. En la 1, **reinicien el entorno** cuando lo pida.
 3. Escriban su heurística **solo en la celda 4**.
-4. Exporten `entrega.json` en la celda 5.
+4. Exporten `entrega.json` en la celda de entrega.
 
 ```
 r = oraculo.evaluar(config, instancias, semilla)
@@ -58,7 +59,7 @@ oraculo = Oraculo(modelo, busqueda, validacion)
 
 Las dos particiones salen del mismo pool y comparten distribución: validar mide si la config aguanta **instancias** nuevas, no restricciones de un tipo nuevo. Ese otro salto se mide al calificar, con familias que no están en este archivo.
 
-Busquen solo sobre `busqueda`. `oraculo.validar` mide la config elegida con una muestra fija de `n` instancias (las 300 tardan) e imprime qué restricciones se cayeron más.
+Busquen solo sobre `busqueda`. `oraculo.validar` mide la config elegida con una muestra fija de `n` instancias (las 87 pueden tardar) e imprime qué restricciones se cayeron más.
 
 ```
 r_val = oraculo.validar(mejor[1], n=30)
@@ -76,6 +77,12 @@ Una instancia trae **hasta 5 restricciones** (2.3 en promedio) y se puntúa todo
 | `oraculo.py` | La caja negra. Se consulta, no se abre |
 | `ayudas.py` | Cargar modelo, datos, dividir, ver un prompt, curva, entrega |
 | `datos_visibles.json` | 450 instancias: 100 de búsqueda, 87 de validación, 263 descartadas |
+| `INFORME_PRIMERA_ENTREGA.md` | Formalización y reducción desde 3-SAT |
+| `MANUAL_TECNICO.md` | Instalación, arquitectura, ejecución y límites |
+| `requirements.txt` | Dependencias base del entorno Python |
+| `notebook_busqueda.ipynb` | Búsqueda reproducible, registro, trazas y validación |
+| `notebook_evaluacion.ipynb` | Carga automática de `entrega.json` y evaluación |
+| `Primera_entrega.ipynb` | Notebook final organizado para la primera entrega |
 
 ## Entrega
 

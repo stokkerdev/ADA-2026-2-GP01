@@ -1,0 +1,13 @@
+# Proyecto Oráculo — dependencias base
+# La ejecución completa requiere además una GPU CUDA compatible.
+torch
+transformers
+accelerate
+bitsandbytes>=0.46.1
+tqdm
+matplotlib
+nltk
+spacy
+emoji
+langdetect
+immutabledict
